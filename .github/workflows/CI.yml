@@ -21,6 +21,6 @@ jobs:
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: docker tag
-        run: docker tag local-image:tagname new-repo:tagname
+        run: docker tag valid_operation:tagname new-repo:tagname
       - name: docker push
         run: docker push new-repo:tagname
